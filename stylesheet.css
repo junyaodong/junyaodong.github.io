@@ -796,8 +796,9 @@ body {
 .section-head p { margin-left: 0; }
 .section + .section {
     margin-top: 40px;
-    border-top: 1px solid var(--line-strong);
+    border-top: 1px solid #aab3c3;
 }
+html[data-theme="dark"] .section + .section { border-top-color: #4d5668; }
 
 /* News & Service: timeline */
 .news-row,
