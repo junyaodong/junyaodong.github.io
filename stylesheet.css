@@ -1085,3 +1085,9 @@ html[data-theme="dark"] .venue.accepted { color: var(--bg); }
 @media (prefers-reduced-motion: reduce) {
     .news-hot .hot-text { animation: none; }
 }
+
+/* Dark mode: brighter, lighter hues plus a soft glow for contrast on dark background */
+html[data-theme="dark"] .news-hot .hot-text {
+    background-image: linear-gradient(90deg, #ff7a9c, #ffc266, #5eead4, #7db4ff, #c4a1ff, #ff7a9c);
+    filter: drop-shadow(0 0 6px rgba(160, 130, 255, 0.35));
+}
