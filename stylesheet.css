@@ -1002,10 +1002,10 @@ html[data-theme="dark"] .venue.accepted { color: var(--bg); }
 .pub-meta .venue,
 .pub-meta .pub-links { margin: 0; }
 
-/* Balance odd-count OSS grid on desktop */
+/* Uniform 2-column OSS card boxes on desktop */
 @media (min-width: 861px) {
-    .oss-grid > .oss-card:last-child:nth-child(odd) {
-        grid-column: 1 / -1;
+    .oss-grid {
+        grid-auto-rows: 1fr;
     }
 }
 
