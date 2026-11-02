@@ -761,18 +761,27 @@ body {
 
 /* Hero */
 .bio a,
-.email-line a {
+.email-line span {
     background-image: linear-gradient(currentColor, currentColor);
     background-size: 0% 1px;
     background-position: 0 100%;
     background-repeat: no-repeat;
     transition: background-size 0.3s var(--ease);
 }
-.bio a:hover,
-.email-line a:hover { text-decoration: none; background-size: 100% 1px; }
-.email-line { margin: 12px 0 0; color: var(--muted); font-size: 0.95rem; }
-.email-line a { font-family: var(--font-mono); font-size: 0.88rem; }
-.links { gap: 10px; margin-top: 18px; }
+.bio a:hover { text-decoration: none; background-size: 100% 1px; }
+.email-line { margin: 14px 0 0; }
+.email-line a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 0.98rem;
+    transition: color 0.2s ease;
+}
+.email-line svg { flex: none; opacity: 0.85; }
+.email-line a:hover { color: var(--ink); text-decoration: none; }
+.email-line a:hover span { background-size: 100% 1px; }
+.links { gap: 10px; margin-top: 16px; }
 .links a {
     padding: 7px 15px;
     background: var(--card);
