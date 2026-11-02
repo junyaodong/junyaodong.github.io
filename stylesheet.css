@@ -1060,3 +1060,28 @@ html[data-theme="dark"] .venue.accepted { color: var(--bg); }
 .summary { margin: 8px 0 0; color: var(--text); font-size: 0.94rem; line-height: 1.55; }
 .summary + .tags { margin-top: 4px; }
 
+
+/* News highlight: animated rainbow text (add class "news-hot" to a .news-row, "hot-text" to its text span) */
+.news-hot .hot-text {
+    font-weight: 600;
+    background-image: linear-gradient(90deg, #ff3d71, #ff9f1c, #2ec4b6, #3a86ff, #8338ec, #ff3d71);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: hot-slide 4s linear infinite;
+}
+.news-hot .hot-text a,
+.news-hot .hot-text strong {
+    color: inherit;
+    -webkit-text-fill-color: transparent;
+    text-decoration-color: currentColor;
+}
+@keyframes hot-slide {
+    from { background-position: 0% 50%; }
+    to { background-position: 300% 50%; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .news-hot .hot-text { animation: none; }
+}
