@@ -971,8 +971,13 @@ html[data-theme="dark"] .venue.accepted { color: var(--bg); }
     .pub { padding: 14px; }
 }
 
-/*Single-column publication cards (no thumbnails) */
-.pub { grid-template-columns: minmax(0, 1fr); padding: 18px 20px; }
+/* Single-column publication cards (no thumbnails) */
+.pub {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 18px 20px;
+    border-left: 3px solid color-mix(in srgb, var(--c) 55%, var(--line));
+}
+.pub:hover { border-left-color: var(--c); }
 
 /* Experience timeline wider date column + company logos */
 #experience .talk { grid-template-columns: 126px minmax(0, 1fr); align-items: start; }
