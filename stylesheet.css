@@ -793,15 +793,11 @@ body {
 /* Section headings with accent bar */
 .section { padding-top: 56px; }
 .section-head { margin-bottom: 22px; }
-.section-head h2 { display: flex; align-items: center; gap: 12px; }
-.section-head h2::before {
-    content: "";
-    width: 6px;
-    height: 0.9em;
-    border-radius: 3px;
-    background: var(--accent);
+.section-head p { margin-left: 0; }
+.section + .section {
+    margin-top: 40px;
+    border-top: 1px solid var(--line);
 }
-.section-head p { margin-left: 18px; }
 
 /* News & Service: timeline */
 .news-row,
