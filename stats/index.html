@@ -2,92 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title>Visitor Radar · Junyao Dong</title>
-    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-    <script>
-        (function () {
-            var BASE = "https://jd-visitor-radar.idjyiq.workers.dev/";
-            var params = new URLSearchParams(location.search);
-            if (params.get("reset") === "1") {
-                try { localStorage.removeItem("jd_radar_key"); } catch (e) {}
-            }
-            var urlKey = params.get("key");
-            if (urlKey) {
-                try { localStorage.setItem("jd_radar_key", urlKey.trim()); } catch (e) {}
-                location.replace(BASE + "?key=" + encodeURIComponent(urlKey.trim()));
-                return;
-            }
-            var saved = null;
-            try { saved = localStorage.getItem("jd_radar_key"); } catch (e) {}
-            if (saved) {
-                location.replace(BASE + "?key=" + encodeURIComponent(saved));
-            }
-        })();
-    </script>
-    <style>
-        :root { --bg:#f5f6f8; --card:#ffffff; --ink:#141b2d; --muted:#64748b; --line:#dfe3ec; --accent:#0f766e; }
-        @media (prefers-color-scheme: dark) {
-            :root { --bg:#0b0f17; --card:#121824; --ink:#f1f5f9; --muted:#8b949e; --line:#1f293b; --accent:#2dd4bf; }
-        }
-        * { box-sizing: border-box; }
-        body {
-            margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 20px;
-            background: var(--bg); color: var(--ink);
-            font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        }
-        .box {
-            width: 100%; max-width: 380px; background: var(--card); border: 1px solid var(--line);
-            border-radius: 14px; padding: 26px 24px; box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
-        }
-        h1 { margin: 0 0 6px; font-size: 18px; letter-spacing: -0.02em; }
-        p { margin: 0 0 18px; color: var(--muted); font-size: 13px; }
-        input {
-            width: 100%; padding: 10px 12px; border-radius: 9px; border: 1px solid var(--line);
-            background: var(--bg); color: var(--ink); font-size: 14px; outline: none; margin-bottom: 12px;
-        }
-        input:focus { border-color: var(--accent); }
-        button {
-            width: 100%; padding: 10px 14px; border-radius: 9px; border: 0;
-            background: var(--accent); color: #fff; font-weight: 600; font-size: 14px; cursor: pointer;
-        }
-        html { color-scheme: light dark; }
-        .err { color: #dc2626; font-size: 12.5px; margin-bottom: 10px; display: none; }
-        .back { display: block; text-align: center; margin-top: 14px; color: var(--muted); font-size: 12.5px; text-decoration: none; }
-        .back:hover { color: var(--ink); }
-    </style>
+    <title>Redirecting to Visitor Radar...</title>
+    <script>location.replace("https://jd-visitor-radar.idjyiq.workers.dev/");</script>
+    <meta http-equiv="refresh" content="0; url=https://jd-visitor-radar.idjyiq.workers.dev/">
 </head>
-<body>
-    <form class="box" id="f">
-        <h1>Visitor Radar</h1>
-        <p>Enter your admin key once — this browser will remember it for instant access next time.</p>
-        <div class="err" id="err">Invalid key, please try again.</div>
-        <input id="k" type="password" placeholder="Admin key" autocomplete="current-password" autofocus required>
-        <button id="btn" type="submit">Open Dashboard</button>
-        <a class="back" href="../">← Back to junyaodong.github.io</a>
-    </form>
-    <script>
-        var BASE = "https://jd-visitor-radar.idjyiq.workers.dev";
-        document.getElementById("f").addEventListener("submit", function (e) {
-            e.preventDefault();
-            var k = document.getElementById("k").value.trim();
-            if (!k) return;
-            var btn = document.getElementById("btn");
-            var err = document.getElementById("err");
-            err.style.display = "none";
-            btn.textContent = "Verifying...";
-            fetch(BASE + "/api/stats?days=1&key=" + encodeURIComponent(k))
-                .then(function (r) {
-                    if (!r.ok) throw new Error("bad");
-                    try { localStorage.setItem("jd_radar_key", k); } catch (ex) {}
-                    location.replace(BASE + "/?key=" + encodeURIComponent(k));
-                })
-                .catch(function () {
-                    btn.textContent = "Open Dashboard";
-                    err.style.display = "block";
-                });
-        });
-    </script>
-</body>
+<body></body>
 </html>
