@@ -108,6 +108,12 @@
 
 /* Campus & city visitor beacon (Cloudflare Worker + D1) */
 (function () {
+    var cp = document.getElementById("copyright-trigger");
+    if (cp) {
+        cp.addEventListener("dblclick", function () {
+            window.location.href = "/stats/";
+        });
+    }
     try {
         if (location.hostname === "localhost" || location.hostname === "127.0.0.1") return;
         var payload = JSON.stringify({
