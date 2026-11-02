@@ -760,15 +760,19 @@ body {
 .theme-toggle:hover { transform: rotate(18deg); }
 
 /* Hero */
-.bio a {
+.bio a,
+.email-line a {
     background-image: linear-gradient(currentColor, currentColor);
     background-size: 0% 1px;
     background-position: 0 100%;
     background-repeat: no-repeat;
     transition: background-size 0.3s var(--ease);
 }
-.bio a:hover { text-decoration: none; background-size: 100% 1px; }
-.links { gap: 10px; margin-top: 26px; }
+.bio a:hover,
+.email-line a:hover { text-decoration: none; background-size: 100% 1px; }
+.email-line { margin: 12px 0 0; color: var(--muted); font-size: 0.95rem; }
+.email-line a { font-family: var(--font-mono); font-size: 0.88rem; }
+.links { gap: 10px; margin-top: 18px; }
 .links a {
     padding: 7px 15px;
     background: var(--card);
@@ -776,8 +780,6 @@ body {
     transition: transform 0.2s var(--ease), border-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
 }
 .links a:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: var(--accent); color: var(--accent); }
-.links li:first-child a { background: var(--ink); border-color: var(--ink); color: var(--bg); }
-.links li:first-child a:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
 
 /* Section headings with accent bar */
 .section { padding-top: 56px; }
