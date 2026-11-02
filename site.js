@@ -9,6 +9,19 @@
         });
     }
 
+    var updatedEl = document.getElementById("last-updated");
+    if (updatedEl) {
+        fetch("https://api.github.com/repos/junyaodong/junyaodong.github.io/commits/main")
+            .then(function (res) { return res.ok ? res.json() : null; })
+            .then(function (data) {
+                var iso = data && data.commit && data.commit.committer && data.commit.committer.date;
+                var d = iso ? new Date(iso) : (document.lastModified ? new Date(document.lastModified) : null);
+                if (!d || isNaN(d.getTime())) return;
+                updatedEl.textContent = "Last updated: " + d.toLocaleDateString("en-US", { month: "long", year: "numeric" });
+            })
+            .catch(function () {});
+    }
+
     function fmt(n) {
         if (n >= 1000) return (n / 1000).toFixed(n >= 10000 ? 0 : 1).replace(/\.0$/, "") + "k";
         return String(n);
