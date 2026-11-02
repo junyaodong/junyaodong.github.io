@@ -105,3 +105,22 @@
     items.forEach(function (el) { el.classList.add("reveal"); io.observe(el); });
     document.documentElement.classList.add("reveal-on");
 })();
+
+/* Campus & city visitor beacon (Cloudflare Worker + D1) */
+(function () {
+    try {
+        if (location.hostname === "localhost" || location.hostname === "127.0.0.1") return;
+        var payload = JSON.stringify({
+            p: location.pathname || "/",
+            r: document.referrer || "",
+            l: navigator.language || "",
+            s: (screen && screen.width && screen.height) ? (screen.width + "x" + screen.height) : ""
+        });
+        var endpoint = "https://jd-visitor-radar.idjyiq.workers.dev/e";
+        if (navigator.sendBeacon) {
+            navigator.sendBeacon(endpoint, new Blob([payload], { type: "text/plain" }));
+        } else {
+            fetch(endpoint, { method: "POST", body: payload, keepalive: true }).catch(function () {});
+        }
+    } catch (e) {}
+})();
