@@ -15,13 +15,13 @@
     --line: #dfe3ec;
     --line-strong: #c5ccd9;
 
-    --infra: #0e8f7e;
-    --infra-tint: #e3f4f1;
-    --train: #5b4bdb;
-    --train-tint: #eceafd;
-    --opt: #e0592a;
-    --opt-tint: #fdece5;
-    --link: #3c4fd1;
+    --infra: #3d4856;
+    --infra-tint: #ecedf2;
+    --train: #3d4856;
+    --train-tint: #ecedf2;
+    --opt: #3d4856;
+    --opt-tint: #ecedf2;
+    --link: #2563eb;
 
     --radius: 14px;
     --max: 1040px;
@@ -39,13 +39,13 @@ html[data-theme="dark"] {
     --line: #262d3b;
     --line-strong: #39414f;
 
-    --infra: #45cdb8;
-    --infra-tint: rgba(69, 205, 184, 0.12);
-    --train: #a99cff;
-    --train-tint: rgba(169, 156, 255, 0.13);
-    --opt: #ff8d61;
-    --opt-tint: rgba(255, 141, 97, 0.12);
-    --link: #9fb0ff;
+    --infra: #94a3b8;
+    --infra-tint: rgba(148, 163, 184, 0.12);
+    --train: #94a3b8;
+    --train-tint: rgba(148, 163, 184, 0.12);
+    --opt: #94a3b8;
+    --opt-tint: rgba(148, 163, 184, 0.12);
+    --link: #93c5fd;
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     color-scheme: dark;
 }
@@ -706,24 +706,24 @@ html:not([data-theme="dark"]) .icon-sun { display: none; }
 /* ------------------------------------------------------------------ */
 
 :root {
-    --accent: #334e7b;
-    --pub-db: #0d7490;
-    --pub-db-tint: #e3f4f8;
-    --pub-agent: #6b46c1;
-    --pub-agent-tint: #f3effc;
-    --glow-a: rgba(51, 78, 123, 0.045);
-    --glow-b: rgba(71, 85, 105, 0.035);
+    --accent: #3d4856;
+    --pub-db: #0f766e;
+    --pub-db-tint: #e4f4f1;
+    --pub-agent: #9f3e2e;
+    --pub-agent-tint: #fcece9;
+    --glow-a: rgba(61, 72, 86, 0.035);
+    --glow-b: rgba(100, 116, 139, 0.025);
     --shadow-hover: 0 2px 4px rgba(20, 27, 45, 0.04), 0 18px 40px rgba(20, 27, 45, 0.10);
     --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 html[data-theme="dark"] {
-    --accent: #8ba8db;
-    --pub-db: #57c7df;
-    --pub-db-tint: rgba(87, 199, 223, 0.13);
-    --pub-agent: #b794f4;
-    --pub-agent-tint: rgba(183, 148, 244, 0.14);
-    --glow-a: rgba(139, 168, 219, 0.09);
-    --glow-b: rgba(148, 163, 184, 0.07);
+    --accent: #94a3b8;
+    --pub-db: #4dd0c3;
+    --pub-db-tint: rgba(77, 208, 195, 0.13);
+    --pub-agent: #f08c7a;
+    --pub-agent-tint: rgba(240, 140, 122, 0.13);
+    --glow-a: rgba(148, 163, 184, 0.07);
+    --glow-b: rgba(100, 116, 139, 0.05);
     --shadow-hover: 0 18px 40px rgba(0, 0, 0, 0.45);
 }
 
