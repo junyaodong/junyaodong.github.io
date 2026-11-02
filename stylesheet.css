@@ -1018,6 +1018,12 @@ html[data-theme="dark"] .venue.accepted { color: var(--bg); }
 }
 .pub-meta .venue,
 .pub-meta .pub-links { margin: 0; }
+.venue-status {
+    color: var(--muted);
+    font-size: 0.82rem;
+    font-weight: 500;
+    margin-right: -2px;
+}
 
 /* Uniform 2-column OSS card boxes on desktop */
 @media (min-width: 861px) {
