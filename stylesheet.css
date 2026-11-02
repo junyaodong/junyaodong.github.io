@@ -706,15 +706,24 @@ html:not([data-theme="dark"]) .icon-sun { display: none; }
 /* ------------------------------------------------------------------ */
 
 :root {
-    --accent: var(--infra);
-    --glow-a: rgba(14, 143, 126, 0.045);
-    --glow-b: rgba(91, 75, 219, 0.035);
+    --accent: #334e7b;
+    --pub-db: #0d7490;
+    --pub-db-tint: #e3f4f8;
+    --pub-agent: #a34832;
+    --pub-agent-tint: #fcedea;
+    --glow-a: rgba(51, 78, 123, 0.045);
+    --glow-b: rgba(71, 85, 105, 0.035);
     --shadow-hover: 0 2px 4px rgba(20, 27, 45, 0.04), 0 18px 40px rgba(20, 27, 45, 0.10);
     --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 html[data-theme="dark"] {
-    --glow-a: rgba(69, 205, 184, 0.10);
-    --glow-b: rgba(169, 156, 255, 0.09);
+    --accent: #8ba8db;
+    --pub-db: #57c7df;
+    --pub-db-tint: rgba(87, 199, 223, 0.13);
+    --pub-agent: #ef8f78;
+    --pub-agent-tint: rgba(239, 143, 120, 0.13);
+    --glow-a: rgba(139, 168, 219, 0.09);
+    --glow-b: rgba(148, 163, 184, 0.07);
     --shadow-hover: 0 18px 40px rgba(0, 0, 0, 0.45);
 }
 
@@ -779,7 +788,7 @@ body {
     width: 6px;
     height: 0.9em;
     border-radius: 3px;
-    background: linear-gradient(180deg, var(--infra), var(--train));
+    background: var(--accent);
 }
 .section-head p { margin-left: 18px; }
 
@@ -829,7 +838,9 @@ section > .wrap > .news-row:first-of-type::after { border-color: var(--accent); 
 .earlier summary { padding-left: 22px; }
 .earlier[open] .news-row::after { border-color: var(--line-strong); }
 
-/* Publications: card rows */
+/* Publications: dedicated topic palettes distinct from page chrome & OSS */
+.theme.infra { --c: var(--pub-db); --t: var(--pub-db-tint); }
+.theme.opt { --c: var(--pub-agent); --t: var(--pub-agent-tint); }
 .theme-head { border-bottom: 0; padding-bottom: 4px; position: relative; }
 .theme-head h3 { display: inline-flex; align-items: center; gap: 8px; }
 .theme-head h3::before {
@@ -870,9 +881,12 @@ html[data-theme="dark"] .venue.accepted { color: var(--bg); }
 .pop-links a { transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease; }
 .pub-links a:hover { border-color: var(--c, var(--ink)); color: var(--c, var(--ink)); background: var(--t, transparent); }
 
-/* Open source cards (compact) */
+/* Open source cards (compact, unified neutral slate accent) */
 .oss-grid { gap: 14px; }
-.oss-card.train { --c: var(--train); --t: var(--train-tint); }
+.oss-card,
+.oss-card.infra,
+.oss-card.opt,
+.oss-card.train { --c: var(--accent); --t: var(--bg-soft); }
 .oss-card {
     position: relative;
     display: flex;
