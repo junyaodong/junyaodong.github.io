@@ -774,12 +774,12 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    color: var(--muted);
+    color: var(--link);
     font-size: 0.98rem;
     transition: color 0.2s ease;
 }
 .email-line svg { flex: none; opacity: 0.85; }
-.email-line a:hover { color: var(--ink); text-decoration: none; }
+.email-line a:hover { color: var(--link); text-decoration: none; }
 .email-line a:hover span { background-size: 100% 1px; }
 .links { gap: 10px; margin-top: 16px; }
 .links a {
