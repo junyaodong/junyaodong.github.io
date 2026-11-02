@@ -966,11 +966,15 @@ html[data-theme="dark"] .venue.accepted { color: var(--bg); }
 }
 
 /* Wider thumbnails so figure-style covers (e.g. CANDOR-Bench Fig. 1) stay legible */
-.pub { grid-template-columns: 220px minmax(0, 1fr); }
-.pub-media { height: 112px; padding: 6px; }
+.pub { grid-template-columns: 286px minmax(0, 1fr); }
+.pub-media { height: 146px; padding: 8px; }
+@media (max-width: 860px) {
+    .pub { grid-template-columns: 240px minmax(0, 1fr); }
+    .pub-media { height: 124px; }
+}
 @media (max-width: 560px) {
     .pub { grid-template-columns: 1fr; }
-    .pub-media { height: 120px; }
+    .pub-media { height: 156px; }
 }
 
 /* Figure thumbnails (real paper figures) */
