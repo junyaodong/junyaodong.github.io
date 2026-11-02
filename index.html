@@ -9,9 +9,7 @@
             var html = document.documentElement;
             var saved = null;
             try { saved = sessionStorage.getItem("theme"); } catch (e) {}
-            var hour = new Date().getHours();
-            var isNight = hour < 6 || hour >= 19;
-            var dark = saved ? saved === "dark" : isNight;
+            var dark = saved === "dark";
             html.setAttribute("data-theme", dark ? "dark" : "light");
         })();
     </script>
