@@ -894,16 +894,22 @@ html[data-theme="dark"] .venue.accepted { color: var(--bg); }
     width: 42px;
     height: 42px;
     border-radius: 11px;
-    background: var(--t);
-    border: 1px solid color-mix(in srgb, var(--c) 25%, transparent);
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid var(--line);
     color: var(--c);
     font-family: var(--font-mono);
     font-size: 0.92rem;
     font-weight: 500;
     letter-spacing: -0.02em;
-    transition: background 0.25s ease, color 0.25s ease;
+    transition: border-color 0.25s ease, transform 0.25s var(--ease);
 }
-.oss-card:hover .oss-mark { background: var(--c); color: var(--card); }
+.oss-mark img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.oss-card:hover .oss-mark { border-color: color-mix(in srgb, var(--c) 45%, var(--line)); }
 .oss-title { flex: 1; min-width: 0; }
 .oss-card h3 { font-size: 1.14rem; line-height: 1.2; }
 .oss-card h3 a { color: var(--ink); }
