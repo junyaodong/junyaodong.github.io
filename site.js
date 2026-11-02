@@ -13,10 +13,10 @@
     if (updatedEl) {
         var fmtUpdated = function (d) {
             if (!d || isNaN(d.getTime())) return;
-            var datePart = d.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
-            var hh = String(d.getHours()).padStart(2, "0");
-            var mm = String(d.getMinutes()).padStart(2, "0");
-            updatedEl.textContent = "Last updated: " + datePart + ", " + hh + ":" + mm;
+            var tz = { timeZone: "Asia/Singapore" };
+            var datePart = d.toLocaleDateString("en-US", Object.assign({ month: "short", day: "numeric", year: "numeric" }, tz));
+            var timePart = d.toLocaleTimeString("en-GB", Object.assign({ hour: "2-digit", minute: "2-digit", hour12: false }, tz));
+            updatedEl.textContent = "Last updated: " + datePart + ", " + timePart + " SGT";
         };
         fetch("https://api.github.com/repos/junyaodong/junyaodong.github.io/commits/main")
             .then(function (res) { return res.ok ? res.json() : null; })
