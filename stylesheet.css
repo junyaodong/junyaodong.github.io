@@ -1070,7 +1070,7 @@ html[data-theme="dark"] .venue.accepted { color: var(--bg); }
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    animation: hot-slide 20s linear infinite;
+    animation: hot-slide 30s linear infinite;
 }
 .news-hot .hot-text a,
 .news-hot .hot-text strong {
