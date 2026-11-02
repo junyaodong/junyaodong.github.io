@@ -794,12 +794,15 @@ body {
 .section { padding-top: 56px; }
 .section-head { margin-bottom: 22px; }
 .section-head p { margin-left: 0; }
-.section-head h2 {
-    display: inline-block;
-    padding-bottom: 6px;
-    border-bottom: 2px solid #aab3c3;
+.section-head h2::after {
+    content: "";
+    display: block;
+    width: 72px;
+    height: 2px;
+    margin-top: 8px;
+    background: #aab3c3;
 }
-html[data-theme="dark"] .section-head h2 { border-bottom-color: #4d5668; }
+html[data-theme="dark"] .section-head h2::after { background: #4d5668; }
 
 /* News & Service: timeline */
 .news-row,
