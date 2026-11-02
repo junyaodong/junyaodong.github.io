@@ -169,7 +169,7 @@ html:not([data-theme="dark"]) .icon-sun { display: none; }
 .links svg { width: 15px; height: 15px; flex: none; }
 
 /* Sections */
-.section { padding: 44px 0 8px; }
+.section { padding: 44px 0 8px; scroll-margin-top: 64px; }
 .section-head { margin-bottom: 18px; }
 .section-head h2 {
     margin: 0;
