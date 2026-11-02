@@ -11,15 +11,22 @@
 
     var updatedEl = document.getElementById("last-updated");
     if (updatedEl) {
+        var fmtUpdated = function (d) {
+            if (!d || isNaN(d.getTime())) return;
+            var datePart = d.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+            var hh = String(d.getHours()).padStart(2, "0");
+            var mm = String(d.getMinutes()).padStart(2, "0");
+            updatedEl.textContent = "Last updated: " + datePart + ", " + hh + ":" + mm;
+        };
         fetch("https://api.github.com/repos/junyaodong/junyaodong.github.io/commits/main")
             .then(function (res) { return res.ok ? res.json() : null; })
             .then(function (data) {
                 var iso = data && data.commit && data.commit.committer && data.commit.committer.date;
-                var d = iso ? new Date(iso) : (document.lastModified ? new Date(document.lastModified) : null);
-                if (!d || isNaN(d.getTime())) return;
-                updatedEl.textContent = "Last updated: " + d.toLocaleDateString("en-US", { month: "long", year: "numeric" });
+                fmtUpdated(iso ? new Date(iso) : (document.lastModified ? new Date(document.lastModified) : null));
             })
-            .catch(function () {});
+            .catch(function () {
+                if (document.lastModified) fmtUpdated(new Date(document.lastModified));
+            });
     }
 
     function fmt(n) {
