@@ -978,6 +978,22 @@ html[data-theme="dark"] .venue.accepted { color: var(--bg); }
     border-left: 3px solid color-mix(in srgb, var(--c) 55%, var(--line));
 }
 .pub:hover { border-left-color: var(--c); }
+.pub-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-top: 7px;
+}
+.pub-meta .venue,
+.pub-meta .pub-links { margin: 0; }
+
+/* Balance odd-count OSS grid on desktop */
+@media (min-width: 861px) {
+    .oss-grid > .oss-card:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+    }
+}
 
 /* Experience timeline wider date column + company logos */
 #experience .talk { grid-template-columns: 126px minmax(0, 1fr); align-items: start; }
