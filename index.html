@@ -8,9 +8,10 @@
         (function () {
             var html = document.documentElement;
             var saved = null;
-            try { saved = localStorage.getItem("theme"); } catch (e) {}
-            var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-            var dark = saved ? saved === "dark" : prefersDark;
+            try { saved = sessionStorage.getItem("theme"); } catch (e) {}
+            var hour = new Date().getHours();
+            var isNight = hour < 6 || hour >= 19;
+            var dark = saved ? saved === "dark" : isNight;
             html.setAttribute("data-theme", dark ? "dark" : "light");
         })();
     </script>
@@ -326,7 +327,7 @@
             </div>
         </div>
     </footer>
-    <script src="site.js?v=3"></script>
+    <script src="site.js?v=4"></script>
     <!-- Default Statcounter code for personal page https://junyaodong.github.io/ -->
     <script type="text/javascript">
     var sc_project=13364389;
