@@ -971,8 +971,14 @@ html[data-theme="dark"] .venue.accepted { color: var(--bg); }
     .pub { padding: 14px; }
 }
 
-/* Single-column publication cards (no thumbnails) */
+/*Single-column publication cards (no thumbnails) */
 .pub { grid-template-columns: minmax(0, 1fr); padding: 18px 20px; }
+
+/* Experience timeline wider date column */
+#experience .talk { grid-template-columns: 126px minmax(0, 1fr); }
+@media (max-width: 560px) {
+    #experience .talk { grid-template-columns: 1fr; }
+}
 
 /* One-line paper summaries */
 .summary { margin: 8px 0 0; color: var(--text); font-size: 0.94rem; line-height: 1.55; }
