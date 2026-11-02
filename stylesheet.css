@@ -808,7 +808,7 @@ html[data-theme="dark"] .section-head h2::after { background: #4d5668; }
 .news-row,
 .talk {
     position: relative;
-    grid-template-columns: 96px minmax(0, 1fr);
+    grid-template-columns: 120px minmax(0, 1fr);
     padding: 13px 0 13px 22px;
     border: 0 !important;
 }
