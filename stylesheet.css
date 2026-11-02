@@ -1072,11 +1072,13 @@ html[data-theme="dark"] .venue.accepted { color: var(--bg); }
     color: transparent;
     animation: hot-slide 30s linear infinite;
 }
-.news-hot .hot-text a,
 .news-hot .hot-text strong {
     color: inherit;
     -webkit-text-fill-color: transparent;
-    text-decoration-color: currentColor;
+}
+.news-hot .hot-text a {
+    color: var(--link);
+    -webkit-text-fill-color: var(--link);
 }
 @keyframes hot-slide {
     from { background-position: 0% 50%; }
