@@ -6,14 +6,14 @@
     --font-name: "TeX Gyre Pagella", "Palatino Linotype", Palatino, "Book Antiqua", "Spectral", Georgia, serif;
     --font-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
 
-    --bg: #fbfbfd;
-    --bg-soft: #f3f5f9;
+    --bg: #f5f6f8;
+    --bg-soft: #ecedf2;
     --card: #ffffff;
     --ink: #141b2d;
     --text: #1f2937;
     --muted: #6b7280;
-    --line: #e2e6ee;
-    --line-strong: #c9cfdb;
+    --line: #dfe3ec;
+    --line-strong: #c5ccd9;
 
     --infra: #0e8f7e;
     --infra-tint: #e3f4f1;
@@ -707,8 +707,8 @@ html:not([data-theme="dark"]) .icon-sun { display: none; }
 
 :root {
     --accent: var(--infra);
-    --glow-a: rgba(14, 143, 126, 0.10);
-    --glow-b: rgba(91, 75, 219, 0.08);
+    --glow-a: rgba(14, 143, 126, 0.045);
+    --glow-b: rgba(91, 75, 219, 0.035);
     --shadow-hover: 0 2px 4px rgba(20, 27, 45, 0.04), 0 18px 40px rgba(20, 27, 45, 0.10);
     --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
 }
