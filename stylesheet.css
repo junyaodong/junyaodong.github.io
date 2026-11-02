@@ -1003,6 +1003,12 @@ html[data-theme="dark"] .venue.accepted { color: var(--bg); }
     border-left: 3px solid color-mix(in srgb, var(--c) 55%, var(--line));
 }
 .pub:hover { border-left-color: var(--c); }
+.pub:target {
+    scroll-margin-top: 84px;
+    border-color: color-mix(in srgb, var(--c) 55%, var(--line));
+    border-left-color: var(--c);
+    box-shadow: 0 0 0 3px var(--t), var(--shadow-hover);
+}
 .pub-meta {
     display: flex;
     flex-wrap: wrap;

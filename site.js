@@ -111,7 +111,7 @@
     try {
         if (location.hostname === "localhost" || location.hostname === "127.0.0.1") return;
         var payload = JSON.stringify({
-            p: location.pathname || "/",
+            p: (location.pathname || "/") + (location.hash || ""),
             r: document.referrer || "",
             l: navigator.language || "",
             s: (screen && screen.width && screen.height) ? (screen.width + "x" + screen.height) : ""
