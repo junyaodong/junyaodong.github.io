@@ -709,8 +709,8 @@ html:not([data-theme="dark"]) .icon-sun { display: none; }
     --accent: #334e7b;
     --pub-db: #0d7490;
     --pub-db-tint: #e3f4f8;
-    --pub-agent: #a34832;
-    --pub-agent-tint: #fcedea;
+    --pub-agent: #6b46c1;
+    --pub-agent-tint: #f3effc;
     --glow-a: rgba(51, 78, 123, 0.045);
     --glow-b: rgba(71, 85, 105, 0.035);
     --shadow-hover: 0 2px 4px rgba(20, 27, 45, 0.04), 0 18px 40px rgba(20, 27, 45, 0.10);
@@ -720,8 +720,8 @@ html[data-theme="dark"] {
     --accent: #8ba8db;
     --pub-db: #57c7df;
     --pub-db-tint: rgba(87, 199, 223, 0.13);
-    --pub-agent: #ef8f78;
-    --pub-agent-tint: rgba(239, 143, 120, 0.13);
+    --pub-agent: #b794f4;
+    --pub-agent-tint: rgba(183, 148, 244, 0.14);
     --glow-a: rgba(139, 168, 219, 0.09);
     --glow-b: rgba(148, 163, 184, 0.07);
     --shadow-hover: 0 18px 40px rgba(0, 0, 0, 0.45);
