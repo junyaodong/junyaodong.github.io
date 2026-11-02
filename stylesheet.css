@@ -844,7 +844,7 @@ section > .wrap > .news-row:first-of-type::after { border-color: var(--accent); 
     padding: 2px 8px;
     border-radius: 6px;
     background: var(--bg-soft);
-    color: var(--muted);
+    color: var(--ink);
     white-space: nowrap;
 }
 .earlier summary { padding-left: 22px; }
