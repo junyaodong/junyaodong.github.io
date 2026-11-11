@@ -8,7 +8,7 @@
     function syncTheme() {
         var dark = root.getAttribute("data-theme") === "dark";
         if (toggle) toggle.setAttribute("aria-pressed", dark ? "true" : "false");
-        if (themeMeta) themeMeta.setAttribute("content", dark ? "#0f1217" : "#faf9f6");
+        if (themeMeta) themeMeta.setAttribute("content", dark ? "#121721" : "#ffffff");
     }
     syncTheme();
     if (toggle) {
