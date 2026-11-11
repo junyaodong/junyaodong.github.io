@@ -56,6 +56,7 @@
     --date-w: 104px;
     --gutter: 24px;
     --nav-h: 56px;
+    --sec-gap: 60px;          /* whitespace above each section rule */
     color-scheme: light;
 }
 
@@ -78,8 +79,8 @@ html[data-theme="dark"] {
 * { box-sizing: border-box; }
 html {
     scroll-behavior: smooth;
-    /* Sections carry their own top whitespace, so anchors land a little under the nav. */
-    scroll-padding-top: calc(var(--nav-h) - 24px);
+    /* Sections carry their own top whitespace: anchors land with the rule just under the nav. */
+    scroll-padding-top: calc(var(--nav-h) - var(--sec-gap) + 18px);
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
 }
@@ -249,27 +250,29 @@ html:not([data-theme="dark"]) .icon-sun { display: none; }
 .contact-chip:hover { color: var(--accent); text-decoration: none; }
 
 /* ------------------------------------------------------------------ */
-/* Sections — heading over a hairline, content on the open page        */
+/* Sections — a rule opens each section, then a bold heading           */
 /* ------------------------------------------------------------------ */
-.section { padding: 60px 0 0; }
+.section { padding: var(--sec-gap) 0 0; }
+.section > .wrap {
+    border-top: 1px solid var(--line-strong);
+    padding-top: 30px;
+}
 .section-head {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: baseline;
     gap: 2px 20px;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid var(--line);
+    margin-bottom: 22px;
 }
 .section-head h2 {
     margin: 0;
     color: var(--ink);
     font-family: var(--font-sans);
-    font-weight: 500;
-    font-size: 1.5rem;
-    letter-spacing: -0.012em;
-    line-height: 1.25;
+    font-weight: 650;
+    font-size: 1.7rem;
+    letter-spacing: -0.018em;
+    line-height: 1.2;
 }
 .section-head p {
     color: var(--muted);
@@ -334,7 +337,7 @@ html[data-theme="dark"] .news-hot .hot-text {
 /* ------------------------------------------------------------------ */
 /* Publications — small-caps thrust label, then papers                 */
 /* ------------------------------------------------------------------ */
-.theme + .theme { margin-top: 40px; }
+.theme + .theme { margin-top: 36px; }
 .theme-head { margin-bottom: 12px; }
 .theme-head h3 {
     margin: 0;
@@ -345,7 +348,7 @@ html[data-theme="dark"] .news-hot .hot-text {
     line-height: 1.25;
 }
 
-.pub { scroll-margin-top: 56px; }
+.pub { scroll-margin-top: calc(var(--sec-gap) + 2px); }
 .pub + .pub { margin-top: 28px; }
 .pub:target {
     border-radius: 2px;
@@ -482,9 +485,9 @@ html[data-theme="dark"] .news-hot .hot-text {
 /* ------------------------------------------------------------------ */
 /* Footer                                                              */
 /* ------------------------------------------------------------------ */
-.footer { margin-top: 72px; color: var(--muted); font-size: 0.84rem; }
+.footer { margin-top: var(--sec-gap); color: var(--muted); font-size: 0.84rem; }
 .footer-row {
-    border-top: 1px solid var(--line);
+    border-top: 1px solid var(--line-strong);
     padding: 22px 0 48px;
     display: flex;
     justify-content: space-between;
@@ -514,7 +517,7 @@ html.theme-anim *::after {
 /* Responsive                                                          */
 /* ------------------------------------------------------------------ */
 @media (max-width: 640px) {
-    :root { --gutter: 20px; --nav-h: 88px; }
+    :root { --gutter: 20px; --nav-h: 88px; --sec-gap: 44px; }
     body { font-size: 17px; }
     .nav { border-bottom-color: var(--line); }
     .nav-inner {
@@ -543,13 +546,12 @@ html.theme-anim *::after {
 
     .hero { padding: 40px 0 4px; }
     .hero h1 { margin-bottom: 20px; }
-    .section { padding: 46px 0 0; }
+    .section > .wrap { padding-top: 24px; }
     .section-head { flex-direction: column; align-items: flex-start; margin-bottom: 18px; }
-    .section-head h2 { font-size: 1.38rem; }
+    .section-head h2 { font-size: 1.5rem; }
     .theme + .theme { margin-top: 34px; }
     .pub + .pub { margin-top: 24px; }
     .oss-top { gap: 10px; }
-    .footer { margin-top: 56px; }
 }
 
 @media (max-width: 560px) {
@@ -578,6 +580,7 @@ html.theme-anim *::after {
     body { font-size: 11pt; }
     .nav, .skip-link { display: none; }
     .hero { padding: 0 0 6px; }
-    .section { padding: 22px 0 0; }
+    .section { padding: 18px 0 0; }
+    .section > .wrap { padding-top: 12px; }
     .pub, .oss-item, .news-row, .talk { break-inside: avoid; }
 }
