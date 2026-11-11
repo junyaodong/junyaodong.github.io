@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Junyao Dong</title>
-    <meta name="theme-color" content="#fbfaf8">
+    <meta name="theme-color" content="#faf9f6">
     <script>
         /* Light by default; a manual toggle lasts for the session. Runs before first paint. */
         (function () {
@@ -13,7 +13,7 @@
             try { saved = sessionStorage.getItem("theme"); } catch (e) {}
             var dark = saved === "dark";
             html.setAttribute("data-theme", dark ? "dark" : "light");
-            if (dark) document.querySelector('meta[name="theme-color"]').setAttribute("content", "#101216");
+            if (dark) document.querySelector('meta[name="theme-color"]').setAttribute("content", "#0f1217");
         })();
     </script>
     <meta name="author" content="Junyao Dong">
@@ -28,7 +28,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="preload" href="fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/name-display.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="stylesheet.css?v=53">
+    <link rel="stylesheet" href="stylesheet.css?v=54">
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -51,7 +51,7 @@
     </nav>
 
     <header class="hero" id="about">
-        <div class="wrap grid">
+        <div class="wrap">
             <h1><span class="name">Junyao Dong</span></h1>
             <div class="hero-body">
                 <p class="bio">
@@ -64,13 +64,20 @@
                     My research interests lie in <strong>vector databases</strong>, <strong>retrieval systems</strong>, and <strong>machine learning systems</strong>.
                 </p>
                 <div class="contact">
-                    <p class="email-line">
-                        <a href="mailto:junyao.dong@ntu.edu.sg"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span>junyao.dong@ntu.edu.sg</span></a>
-                    </p>
-                    <ul class="links">
-                        <!-- CV hidden: <li><a href="CV.pdf" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg><span>CV</span></a></li> -->
-                        <li><a href="https://github.com/carsontung666" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.586 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg><span>GitHub</span></a></li>
-                    </ul>
+                    <a class="contact-chip" href="mailto:junyao.dong@ntu.edu.sg">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        <span>junyao.dong@ntu.edu.sg</span>
+                    </a>
+                    <!-- CV hidden:
+                    <a class="contact-chip" href="CV.pdf" target="_blank" rel="noopener noreferrer">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                        <span>CV</span>
+                    </a>
+                    -->
+                    <a class="contact-chip" href="https://github.com/carsontung666" target="_blank" rel="noopener noreferrer">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.586 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        <span>GitHub</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -78,7 +85,7 @@
 
     <main id="main" tabindex="-1">
         <section class="section" id="news">
-            <div class="wrap grid">
+            <div class="wrap">
                 <header class="section-head">
                     <h2>News</h2>
                 </header>
@@ -103,10 +110,10 @@
         </section>
 
         <section class="section" id="publications">
-            <div class="wrap grid">
+            <div class="wrap">
                 <header class="section-head">
                     <h2>Publications</h2>
-                    <p>Selected papers and preprints (* indicates equal contribution).</p>
+                    <p>Selected papers and preprints (* equal contribution)</p>
                 </header>
                 <div class="section-body">
 
@@ -116,31 +123,26 @@
                         </div>
 
                         <article class="pub" id="p-annchor">
-                            <div>
-                                <h4>ANNchor: Concurrency Control for Freshness in Streaming Graph-Based Approximate Nearest Neighbor Search</h4>
-                                <p class="authors"><strong>Junyao Dong</strong>, Shuhao Zhang, Wenchao Zhou, Cheng Long</p>
-                                <div class="pub-meta">
-                                    <span class="venue-status">Under revision at</span>
-                                    <span class="venue pending">SIGMOD 2027</span>
-                                    <span class="venue-status">(Round 3)</span>
-                                </div>
-                                <p class="summary">Concurrency control on a single live HNSW graph makes acknowledged inserts immediately visible without extra tiers or replicas.</p>
+                            <h4>ANNchor: Concurrency Control for Freshness in Streaming Graph-Based Approximate Nearest Neighbor Search</h4>
+                            <p class="authors"><strong>Junyao Dong</strong>, Shuhao Zhang, Wenchao Zhou, Cheng Long</p>
+                            <div class="pub-meta">
+                                <span class="venue pending">Under revision at</span>
+                                <span class="venue revision">SIGMOD 2027 · Round 3</span>
                             </div>
+                            <p class="summary">Concurrency control on a single live HNSW graph makes acknowledged inserts immediately visible without extra tiers or replicas.</p>
                         </article>
 
                         <article class="pub" id="p-candor">
-                            <div>
-                                <h4><a href="https://dl.acm.org/doi/10.1145/3786630" target="_blank" rel="noopener noreferrer">CANDOR-Bench: Benchmarking In-Memory Continuous ANNS under Dynamic Open-World Streams</a></h4>
-                                <p class="authors">Mingqi Wang*, <strong>Junyao Dong*</strong>, Zhuoyan Wu, Jun Liu, Ruicheng Zhang, Jianjun Zhao, Ruipeng Wan, Xinyan Lei, Shuhao Zhang, Bolong Zheng, Haikun Liu, Xiaofei Liao, Hai Jin</p>
-                                <div class="pub-meta">
-                                    <span class="venue accepted">SIGMOD 2026</span>
-                                    <div class="pub-links">
-                                        <a href="https://dl.acm.org/doi/10.1145/3786630" target="_blank" rel="noopener noreferrer">Paper</a>
-                                        <a href="https://github.com/intellistream/SAGE-DB-Bench" target="_blank" rel="noopener noreferrer">Code</a>
-                                    </div>
+                            <h4><a href="https://dl.acm.org/doi/10.1145/3786630" target="_blank" rel="noopener noreferrer">CANDOR-Bench: Benchmarking In-Memory Continuous ANNS under Dynamic Open-World Streams</a></h4>
+                            <p class="authors">Mingqi Wang*, <strong>Junyao Dong*</strong>, Zhuoyan Wu, Jun Liu, Ruicheng Zhang, Jianjun Zhao, Ruipeng Wan, Xinyan Lei, Shuhao Zhang, Bolong Zheng, Haikun Liu, Xiaofei Liao, Hai Jin</p>
+                            <div class="pub-meta">
+                                <span class="venue accepted">SIGMOD 2026</span>
+                                <div class="pub-links">
+                                    <a href="https://dl.acm.org/doi/10.1145/3786630" target="_blank" rel="noopener noreferrer">Paper</a>
+                                    <a href="https://github.com/intellistream/SAGE-DB-Bench" target="_blank" rel="noopener noreferrer">Code</a>
                                 </div>
-                                <p class="summary">Benchmarks 19 streaming ANNS indexes under drift and concurrent writes; no index wins across recall, throughput, and update cost.</p>
                             </div>
+                            <p class="summary">Benchmarks 19 streaming ANNS indexes under drift and concurrent writes; no index wins across recall, throughput, and update cost.</p>
                         </article>
                     </div>
 
@@ -150,31 +152,25 @@
                         </div>
 
                         <article class="pub" id="p-kvlang">
-                            <div>
-                                <h4><a href="https://github.com/array2d/kvlang" target="_blank" rel="noopener noreferrer">The Program Counter Is a Path: Code, Data, and Control in One Addressable Tree</a></h4>
-                                <p class="authors">Peng Li*, <strong>Junyao Dong*</strong></p>
-                                <div class="pub-meta">
-                                    <span class="venue-status">Submitted to</span>
-                                    <span class="venue pending">PLDI 2027</span>
-                                    <div class="pub-links">
-                                        <a href="https://kvlang.com" target="_blank" rel="noopener noreferrer">Website</a>
-                                        <a href="https://github.com/array2d/kvlang" target="_blank" rel="noopener noreferrer">Code</a>
-                                    </div>
+                            <h4><a href="https://github.com/array2d/kvlang" target="_blank" rel="noopener noreferrer">The Program Counter Is a Path: Code, Data, and Control in One Addressable Tree</a></h4>
+                            <p class="authors">Peng Li*, <strong>Junyao Dong*</strong></p>
+                            <div class="pub-meta">
+                                <span class="venue pending">Submitted to PLDI 2027</span>
+                                <div class="pub-links">
+                                    <a href="https://kvlang.com" target="_blank" rel="noopener noreferrer">Website</a>
+                                    <a href="https://github.com/array2d/kvlang" target="_blank" rel="noopener noreferrer">Code</a>
                                 </div>
-                                <p class="summary">Unifies code, data, and the program counter in one plaintext KV tree for stop-resumable, cheaply branchable execution.</p>
                             </div>
+                            <p class="summary">Unifies code, data, and the program counter in one plaintext KV tree for stop-resumable, cheaply branchable execution.</p>
                         </article>
 
                         <article class="pub" id="p-sharedmem">
-                            <div>
-                                <h4>Shared Memory in Multi-Agent Systems: Which View Does the Agent Read?</h4>
-                                <p class="authors"><strong>Junyao Dong</strong>, Xisen Wang, Yu Chen, Yi Li, Qi Zhang</p>
-                                <div class="pub-meta">
-                                    <span class="venue-status">Submitted to</span>
-                                    <span class="venue pending">AAMAS 2027</span>
-                                </div>
-                                <p class="summary">Isolates which view of shared multi-agent memory reaches each prompt and measures how stale views degrade agent decisions.</p>
+                            <h4>Shared Memory in Multi-Agent Systems: Which View Does the Agent Read?</h4>
+                            <p class="authors"><strong>Junyao Dong</strong>, Xisen Wang, Yu Chen, Yi Li, Qi Zhang</p>
+                            <div class="pub-meta">
+                                <span class="venue pending">Submitted to AAMAS 2027</span>
                             </div>
+                            <p class="summary">Isolates which view of shared multi-agent memory reaches each prompt and measures how stale views degrade agent decisions.</p>
                         </article>
                     </div>
                 </div>
@@ -182,61 +178,61 @@
         </section>
 
         <section class="section" id="open-source">
-            <div class="wrap grid">
+            <div class="wrap">
                 <header class="section-head">
-                    <h2>Open-source Highlights</h2>
+                    <h2>Open-Source Highlights</h2>
                 </header>
                 <div class="section-body">
-                    <div class="oss-grid">
-                        <article class="oss-card" id="oss-condb">
+                    <div class="oss-list">
+                        <article class="oss-item" id="oss-condb">
                             <div class="oss-top">
                                 <div class="oss-title">
                                     <h3><a href="https://github.com/VectifyAI/ConDB" target="_blank" rel="noopener noreferrer">ConDB</a></h3>
-                                    <p class="oss-org">PageIndex</p>
+                                    <span class="oss-org">PageIndex</span>
                                 </div>
                                 <span class="oss-role lead">Project Lead</span>
                             </div>
                             <p class="oss-desc">Hierarchical context database for long structured documents — no vector index, no chunking.</p>
                         </article>
 
-                        <article class="oss-card" id="oss-kvlang">
+                        <article class="oss-item" id="oss-kvlang">
                             <div class="oss-top">
                                 <div class="oss-title">
                                     <h3><a href="https://github.com/array2d/kvlang" target="_blank" rel="noopener noreferrer">kvlang</a></h3>
-                                    <p class="oss-org">array2d</p>
+                                    <span class="oss-org">array2d</span>
                                 </div>
                                 <span class="oss-role lead">Co-Lead</span>
                             </div>
                             <p class="oss-desc">Plaintext language where code, data, and the program counter live in one KV tree for stop-resumable execution.</p>
                         </article>
 
-                        <article class="oss-card" id="oss-rlkernel">
+                        <article class="oss-item" id="oss-rlkernel">
                             <div class="oss-top">
                                 <div class="oss-title">
                                     <h3><a href="https://github.com/RL-Align/RL-Kernel" target="_blank" rel="noopener noreferrer">RL-Kernel</a></h3>
-                                    <p class="oss-org">RL-Align</p>
+                                    <span class="oss-org">RL-Align</span>
                                 </div>
                                 <span class="oss-role">Contributor</span>
                             </div>
                             <p class="oss-desc">Operator-level train–inference consistency; CUDA/Triton kernels for DeepSeek V4 compressed attention.</p>
                         </article>
 
-                        <article class="oss-card" id="oss-vllmrlt">
+                        <article class="oss-item" id="oss-vllmrlt">
                             <div class="oss-top">
                                 <div class="oss-title">
                                     <h3><a href="https://github.com/InferMatrixLab/vllm-rlt" target="_blank" rel="noopener noreferrer">vllm-rlt</a></h3>
-                                    <p class="oss-org">InferMatrixLab</p>
+                                    <span class="oss-org">InferMatrixLab</span>
                                 </div>
                                 <span class="oss-role">Contributor</span>
                             </div>
                             <p class="oss-desc">Continuous batching across loop depths with decoupled submission, GPU completion, and output delivery.</p>
                         </article>
 
-                        <article class="oss-card" id="oss-rabitq">
+                        <article class="oss-item" id="oss-rabitq">
                             <div class="oss-top">
                                 <div class="oss-title">
                                     <h3><a href="https://github.com/VectorDB-NTU/RaBitQ-Library" target="_blank" rel="noopener noreferrer">RaBitQ-Library</a></h3>
-                                    <p class="oss-org">VectorDB-NTU</p>
+                                    <span class="oss-org">VectorDB-NTU</span>
                                 </div>
                                 <span class="oss-role">Contributor</span>
                             </div>
@@ -248,7 +244,7 @@
         </section>
 
         <section class="section" id="experience">
-            <div class="wrap grid">
+            <div class="wrap">
                 <header class="section-head">
                     <h2>Industry Experience</h2>
                 </header>
@@ -258,7 +254,7 @@
                         <div class="exp-body">
                             <span class="exp-logo" aria-hidden="true"><img src="images/exp-vectify.svg" alt="" loading="lazy"></span>
                             <div class="exp-text">
-                                <p class="exp-head"><strong>Research Intern</strong>&emsp;<a href="https://pageindex.ai/" target="_blank" rel="noopener noreferrer">PageIndex</a></p>
+                                <p class="exp-head"><strong>Research Intern</strong>, <a href="https://pageindex.ai/" target="_blank" rel="noopener noreferrer">PageIndex</a></p>
                                 <p class="exp-desc">Leading ConDB for hierarchical long-document context retrieval.</p>
                             </div>
                         </div>
@@ -268,7 +264,7 @@
                         <div class="exp-body">
                             <span class="exp-logo" aria-hidden="true"><img src="images/exp-baidu.svg" alt="" loading="lazy"></span>
                             <div class="exp-text">
-                                <p class="exp-head"><strong>Software Engineer</strong>&emsp;<a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">Baidu</a></p>
+                                <p class="exp-head"><strong>Software Engineer</strong>, <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">Baidu</a></p>
                                 <p class="exp-desc">Edge-to-cloud live video streaming, storage, and RTC production infrastructure.</p>
                             </div>
                         </div>
@@ -278,7 +274,7 @@
                         <div class="exp-body">
                             <span class="exp-logo" aria-hidden="true"><img src="images/exp-momenta.png" alt="" loading="lazy"></span>
                             <div class="exp-text">
-                                <p class="exp-head"><strong>R&amp;D Intern</strong>&emsp;<a href="https://www.momenta.cn/" target="_blank" rel="noopener noreferrer">Momenta</a></p>
+                                <p class="exp-head"><strong>R&amp;D Intern</strong>, <a href="https://www.momenta.cn/" target="_blank" rel="noopener noreferrer">Momenta</a></p>
                                 <p class="exp-desc">Log replay and multi-stream synchronization infrastructure for autonomous driving.</p>
                             </div>
                         </div>
@@ -288,10 +284,10 @@
         </section>
 
         <section class="section" id="service">
-            <div class="wrap grid">
+            <div class="wrap">
                 <header class="section-head">
                     <h2>Academic Service</h2>
-                    <p>Program committees and external reviewing.</p>
+                    <p>Program committees and external reviewing</p>
                 </header>
                 <div class="section-body">
                     <div class="talk">
@@ -313,7 +309,7 @@
 
     <footer class="footer">
         <div class="wrap footer-row">
-            <span>© 2026 Junyao Dong · <span id="last-updated">Last updated: Nov 2, 2026, 23:09 SGT</span></span>
+            <span>© 2026 Junyao Dong · <span id="last-updated">Last updated: Nov 11, 2026, 10:55 SGT</span></span>
             <div class="footer-links">
                 <a href="mailto:junyao.dong@ntu.edu.sg">Email</a>
                 <!-- CV hidden: <a href="CV.pdf" target="_blank" rel="noopener noreferrer">CV</a> -->
@@ -321,7 +317,7 @@
             </div>
         </div>
     </footer>
-    <script src="site.js?v=14"></script>
+    <script src="site.js?v=15"></script>
     <!-- Default Statcounter code for personal page https://junyaodong.github.io/ -->
     <script type="text/javascript">
     var sc_project=13364389;

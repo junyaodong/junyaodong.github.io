@@ -8,7 +8,7 @@
     function syncTheme() {
         var dark = root.getAttribute("data-theme") === "dark";
         if (toggle) toggle.setAttribute("aria-pressed", dark ? "true" : "false");
-        if (themeMeta) themeMeta.setAttribute("content", dark ? "#101216" : "#fbfaf8");
+        if (themeMeta) themeMeta.setAttribute("content", dark ? "#0f1217" : "#faf9f6");
     }
     syncTheme();
     if (toggle) {
@@ -101,13 +101,12 @@
     window.addEventListener("load", requestUpdate);
     update();
 
-    // The hero already shows the name large, so the nav brand appears only
-    // after the hero name has scrolled out of view.
+    // Soften the nav brand while the large hero name is visible directly below it.
     var heroName = document.querySelector(".hero h1");
     if (nav && heroName && "IntersectionObserver" in window) {
-        nav.classList.add("brand-hidden");
+        nav.classList.add("at-hero");
         new IntersectionObserver(function (entries) {
-            nav.classList.toggle("brand-hidden", entries[0].isIntersecting);
+            nav.classList.toggle("at-hero", entries[0].isIntersecting);
         }, { rootMargin: "-" + nav.offsetHeight + "px 0px 0px 0px" }).observe(heroName);
     }
 })();
