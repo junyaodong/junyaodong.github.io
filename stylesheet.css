@@ -293,7 +293,6 @@ html:not([data-theme="dark"]) .icon-sun { display: none; }
 .section-head p {
     color: var(--muted);
     font-size: 0.86rem;
-    font-style: italic;
     line-height: 1.4;
 }
 
@@ -447,7 +446,6 @@ html[data-theme="dark"] .news-hot .hot-text {
 .venue.pending {
     color: var(--muted);
     font-size: 0.88rem;
-    font-style: italic;
 }
 
 .pub-links { display: inline-flex; flex-wrap: wrap; gap: 6px; }
