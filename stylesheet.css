@@ -385,8 +385,10 @@ html[data-theme="dark"] .news-hot .hot-text {
     font-size: 0.92rem;
     line-height: 1.3;
 }
-.venue.accepted { color: var(--accent); font-weight: 600; }
-.venue.revision { color: var(--ink); margin-left: 0.28em; }
+.venue.accepted,
+.venue.revision,
+.venue.conf { color: var(--accent); font-weight: 600; }
+.venue + .venue { margin-left: 0.28em; }
 .venue.pending { color: var(--muted); }
 
 .pub-links {
